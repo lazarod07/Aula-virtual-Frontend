@@ -1,0 +1,16 @@
+<main class="login-container">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <h1>Aula Virtual</h1>
+        <p>Ingresa a tu cuenta</p>
+
+        <label for="usuario">Usuario</label>
+        <input id="usuario" type="text" autocomplete="username" formControlName="usuario" />
+
+        <label for="contrasena">Contraseña</label>
+        <input id="contrasena" type="password" autocomplete="current-password" formControlName="contrasena" />
+
+        <button type="submit">
+            {{ loading() ? 'Ingresando' : 'Iniciar sesión' }}
+        </button>
+    </form>
+</main>
